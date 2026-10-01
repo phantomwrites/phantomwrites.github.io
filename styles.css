@@ -305,3 +305,19 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 }
 .play-btn:hover span, .play-btn:focus-visible span { transform: scale(1.08); box-shadow: 0 0 0 16px rgba(157, 140, 255, 0.2), 0 24px 70px -10px rgba(157, 140, 255, 0.85); }
 .work-media.playing .play-btn { opacity: 0; pointer-events: none; }
+
+/* More work: a grid of short demos */
+.mini-head { margin-top: clamp(80px, 12vh, 130px); display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.mini-head h3 { font-weight: 500; letter-spacing: -0.035em; line-height: 1; font-size: clamp(1.8rem, 3.4vw, 2.8rem); }
+.mini-head h3 em { color: var(--violet); }
+.mini-head p { color: var(--muted); }
+.mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(22px, 3vw, 36px); margin-top: clamp(28px, 4vh, 40px); }
+.mini .work-media { border-radius: 12px; box-shadow: 0 30px 80px -40px rgba(157, 140, 255, 0.45); }
+.mini .play-btn span { width: clamp(48px, 4.4vw, 60px); }
+.mini .play-btn span::after { border-width: 10px 0 10px 16px; }
+.mini-title { margin: 16px 0 0; font-weight: 500; font-size: 1.2rem; letter-spacing: -0.02em; }
+.mini-desc { margin-top: 6px; color: var(--muted); font-size: 0.92rem; line-height: 1.55; }
+.mini-credit { margin-top: clamp(28px, 4vh, 40px); }
+@media (max-width: 900px) { .mini-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .mini-grid { grid-template-columns: 1fr; } }
