@@ -6,7 +6,7 @@
   <title>Phantom Studio | Roblox Scripting Commissions</title>
   <meta name="description" content="Commission Roblox scripting in Luau: combat, economies, pets, rounds and saving. Server-first, tested in Studio, delivered with clear setup notes.">
   <meta property="og:title" content="Phantom Studio | Roblox Scripting Commissions">
-  <meta property="og:description" content="Roblox systems that don't break. Server-first Luau, tested before delivery.">
+  <meta property="og:description" content="From idea to in-game. Roblox scripting in Luau, playtested and cheat-tested before delivery.">
   <meta property="og:url" content="https://phantomstudio.live/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
@@ -40,9 +40,10 @@
         <pre id="code-layer"></pre>
         <div class="hero-inner wire">
           <p class="headline">
-            <span class="line"><span>Roblox systems</span></span>
-            <span class="line line-2"><span>that <em>don't</em> break</span></span>
+            <span class="line"><span>From idea</span></span>
+            <span class="line line-2"><span>to <em>in-game.</em></span></span>
           </p>
+          <p class="hero-sub" aria-hidden="true">I script Roblox games: combat, economies, pets, UI and saving, from the first idea to the final details.</p>
         </div>
       </div>
 
@@ -50,9 +51,10 @@
         <div class="blobs" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
         <div class="hero-inner">
           <h1 class="headline">
-            <span class="line"><span>Roblox systems</span></span>
-            <span class="line line-2"><span>that <em>don't</em> break</span></span>
+            <span class="line"><span>From idea</span></span>
+            <span class="line line-2"><span>to <em>in-game.</em></span></span>
           </h1>
+          <p class="hero-sub">I script Roblox games: combat, economies, pets, UI and saving, from the first idea to the final details.</p>
         </div>
       </div>
 
@@ -61,8 +63,7 @@
       <div class="hero-meta">
         <p><span class="k">Studio</span>Phantom Studio<br>Commission scripting</p>
         <p><span class="k">Stack</span>Luau · Roblox Studio<br>Server-first, typed</p>
-        <p class="hero-meta-wide">Combat, economies, pets, rounds and saving: written so exploiters can't break them,
-          tested before you see them.</p>
+        <p class="hero-meta-wide">Every system is playtested and cheat-tested before you see it.</p>
         <a class="scroll-cue" href="#work" aria-label="Scroll to work"><span></span>Scroll</a>
       </div>
     </section>
@@ -92,15 +93,12 @@
           <div class="work-body">
             <p class="work-kicker">Simulator system · Demo · 2026</p>
             <h3 class="work-title">Pet Hatching &amp; <em>Following</em></h3>
-            <p class="work-desc">Eggs with odds shown on the egg, a cinematic hatch reveal, pets that follow
-              every player, an inventory with Equip Best, and a coin multiplier from equipped pets.</p>
+            <p class="work-desc">Eggs, a cinematic hatch reveal, and pets that follow you and boost your coins.</p>
             <ul class="work-points">
-              <li>Every roll happens on the server, and the odds on each egg come from the same table</li>
-              <li>The server decides which egg you opened; the client can't pick one</li>
-              <li>Equip, Equip Best and the equip limit are checked against your own pets on the server</li>
-              <li>Coin multiplier worked out on the server; the UI only displays it</li>
+              <li>Every roll happens on the server, using the same odds shown on the egg</li>
+              <li>Pet ownership and the equip limit are checked on the server</li>
               <li>Followers are drawn on each player's device, so they cost the server nothing</li>
-              <li>Cheat-tested: fake pet IDs, junk data and request spam are rejected</li>
+              <li>Cheat-tested: fake pet IDs, junk data and spam are rejected</li>
             </ul>
             <p class="work-credit"><strong>Credits:</strong> the pet models, UI design, icons and sound effect in
               this clip are third-party assets and are not my own work. All scripting and systems shown are
@@ -118,16 +116,12 @@
           <div class="work-body">
             <p class="work-kicker">Shop &amp; saving · Demo · 2026</p>
             <h3 class="work-title">Exploit-proof <em>Shop</em></h3>
-            <p class="work-desc">A shop with upgrades and cosmetics that saves every purchase, plus an on-screen
-              exploit tester that sends real cheat requests to the live server and shows each one getting
-              blocked.</p>
+            <p class="work-desc">A shop that saves every purchase, with a live exploit tester trying to break it.</p>
             <ul class="work-points">
-              <li>The client sends only an item ID; prices, limits and effects live on the server</li>
-              <li>Fake prices, made-up items and junk data are all rejected with a reason</li>
-              <li>Editing your coins on your own screen doesn't fool the server's balance</li>
-              <li>Spam is rate-limited, and 10 buys in the same frame charge you exactly once</li>
-              <li>You have to be at the shop to buy; requests from across the map are refused</li>
-              <li>Session-locked saving, with a "saved" badge only once the save has actually gone through</li>
+              <li>The client sends only an item ID; prices and limits live on the server</li>
+              <li>Fake prices, made-up items and edited coins are all rejected</li>
+              <li>Spam is rate-limited, and 10 buys at once charge you exactly once</li>
+              <li>Session-locked saving, confirmed before the "saved" badge shows</li>
             </ul>
             <p class="work-credit"><strong>Credits:</strong> the pet model in the Extra Pet Slot icon is a
               third-party asset, and saving uses ProfileStore by loleris (open source, Apache 2.0). All
@@ -145,16 +139,12 @@
           <div class="work-body">
             <p class="work-kicker">Combat system · Demo · 2026 · Sound on</p>
             <h3 class="work-title">Sword Combat &amp; <em>Ragdoll</em></h3>
-            <p class="work-desc">A four-hit sword combo with a finisher that knocks targets into a ragdoll,
-              training dummies that heal, respawn and walk back to their spot, and the exploit tester
-              throwing cheat requests at the live combat server.</p>
+            <p class="work-desc">A four-hit sword combo with a ragdoll finisher, tested against live cheat attempts.</p>
             <ul class="work-points">
-              <li>The client only says "I swung"; the server picks the combo step, the timing and the damage</li>
-              <li>Hits are found by the server: a hitbox swept across the swing, with range, facing and wall checks</li>
-              <li>Damage lands on the animation's impact frame, timed on the server's clock</li>
-              <li>Cooldowns and rate limits on the server: 30 swings at once deal one swing's damage</li>
-              <li>Ragdoll swaps joints for physics constraints and puts the body back together cleanly</li>
-              <li>Hit flash, sparks, damage numbers, camera shake and impact freeze, all client-side</li>
+              <li>The server picks the combo step, the timing and what gets hit</li>
+              <li>A hitbox swept across the swing, with range, facing and wall checks</li>
+              <li>30 swings sent at once deal one swing's damage</li>
+              <li>Ragdolls that knock down and get back up cleanly</li>
             </ul>
             <p class="work-credit"><strong>Credits:</strong> the sword model and aura ("Sword Auras" by
               RexR_Reborn) and the sword animations are third-party assets, and the sound effects are from
