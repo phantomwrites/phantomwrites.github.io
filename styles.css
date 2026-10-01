@@ -260,9 +260,15 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .work-points { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 10px; font-size: 0.95rem; }
 .work-points li { display: flex; gap: 12px; align-items: baseline; }
 .work-points li::before { content: "→"; font-family: var(--mono); color: var(--cyan); flex: none; }
-.work-credit { margin-top: 22px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px;
-  color: var(--muted); font-size: 0.85rem; line-height: 1.55; background: rgba(255, 255, 255, 0.02); }
-.work-credit strong { color: var(--fg); font-weight: 500; }
+.work-credit { margin-top: 22px; font-size: 0.85rem; line-height: 1.55; color: var(--muted); }
+/* a plain "Credits" label that opens on click: no arrow or marker */
+.work-credit summary { list-style: none; cursor: pointer; display: inline-block; font-family: var(--mono); font-size: 0.72rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); border-bottom: 1px dashed transparent; transition: color 0.2s, border-color 0.2s; }
+.work-credit summary::-webkit-details-marker { display: none; }
+.work-credit summary::marker { content: ""; }
+.work-credit summary:hover, .work-credit summary:focus-visible { color: var(--fg); border-bottom-color: var(--dim); }
+.work-credit[open] summary { color: var(--fg); }
+.work-credit p { margin-top: 10px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, 0.02); }
 @media (max-width: 900px) { .work-item { grid-template-columns: 1fr; } }
 
 /* Work: closed until the visitor opens it */
