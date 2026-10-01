@@ -3,27 +3,264 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Phantom Studio</title>
-  <meta name="description" content="Phantom Studio: commission Roblox scripting in Luau. Portfolio coming soon.">
-  <style>
-    :root { --bg: #0e0f12; --fg: #e8e9ec; --muted: #8b8f98; --accent: #8b7cf6; }
-    * { box-sizing: border-box; margin: 0; }
-    body {
-      min-height: 100vh; display: grid; place-items: center; padding: 24px;
-      background: var(--bg); color: var(--fg);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    }
-    main { max-width: 560px; text-align: center; }
-    h1 { font-size: clamp(2rem, 7vw, 3.25rem); letter-spacing: -0.02em; }
-    h1 span { color: var(--accent); }
-    p { margin-top: 16px; color: var(--muted); font-size: 1.05rem; line-height: 1.6; }
-  </style>
+  <title>Phantom Studio | Roblox Scripting Commissions</title>
+  <meta name="description" content="Commission Roblox scripting in Luau: combat, economies, pets, rounds and saving. Server-first, tested in Studio, delivered with clear setup notes.">
+  <meta property="og:title" content="Phantom Studio | Roblox Scripting Commissions">
+  <meta property="og:description" content="Roblox systems that don't break. Server-first Luau, tested before delivery.">
+  <meta property="og:url" content="https://phantomstudio.live/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@PhantomXtras">
+  <meta name="theme-color" content="#07070b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <h1>Phantom <span>Studio</span></h1>
-    <p>Commission Roblox scripting in Luau. Secure systems, safe data saving, tested before delivery.</p>
-    <p>Portfolio launching soon.</p>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Phantom Studio home">Phantom<i>Studio</i></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#services">What I build</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Commissions open <span class="dot" aria-hidden="true"></span></a>
+  </header>
+
+  <main id="main">
+    <!-- HERO: the X-ray lens reveals the code under the headline -->
+    <section id="top" class="hero" aria-label="Introduction">
+      <div class="hero-code" aria-hidden="true">
+        <pre id="code-layer"></pre>
+        <div class="hero-inner wire">
+          <p class="headline">
+            <span class="line"><span>Roblox systems</span></span>
+            <span class="line line-2"><span>that <em>don't</em> break</span></span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-front">
+        <div class="blobs" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+        <div class="hero-inner">
+          <h1 class="headline">
+            <span class="line"><span>Roblox systems</span></span>
+            <span class="line line-2"><span>that <em>don't</em> break</span></span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="lens-ring" aria-hidden="true"><span>LUAU</span></div>
+
+      <div class="hero-meta">
+        <p><span class="k">Studio</span>Phantom Studio<br>Commission scripting</p>
+        <p><span class="k">Stack</span>Luau · Roblox Studio<br>Server-first, typed</p>
+        <p class="hero-meta-wide">Combat, economies, pets, rounds and saving: written so exploiters can't break them,
+          tested before you see them.</p>
+        <a class="scroll-cue" href="#work" aria-label="Scroll to work"><span></span>Scroll</a>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="num">01</span>
+          <h2>Selected <em>work</em></h2>
+          <p>Demo systems built, playtested and cheat-tested in my own showcase place.
+            Recorded in the live Roblox client.</p>
+          <button type="button" class="work-toggle" aria-expanded="false" aria-controls="work-list">
+            <span class="wt-label">View work</span><span class="wt-count">3 demos</span><span class="wt-icon" aria-hidden="true">+</span>
+          </button>
+        </header>
+
+        <div id="work-list" class="work-list">
+        <div class="work-list-inner">
+        <article class="work-item reveal">
+          <div class="work-media">
+            <video src="assets/work/pets-demo.mp4" poster="assets/work/pets-demo-poster.jpg"
+              muted loop playsinline controls preload="none"
+              aria-label="Gameplay recording of the pet hatching and following system"></video>
+          </div>
+          <div class="work-body">
+            <p class="work-kicker">Simulator system · Demo · 2026</p>
+            <h3 class="work-title">Pet Hatching &amp; <em>Following</em></h3>
+            <p class="work-desc">Eggs with odds shown on the egg, a cinematic hatch reveal, pets that follow
+              every player, an inventory with Equip Best, and a coin multiplier from equipped pets.</p>
+            <ul class="work-points">
+              <li>Every roll happens on the server, and the odds on each egg come from the same table</li>
+              <li>The server decides which egg you opened; the client can't pick one</li>
+              <li>Equip, Equip Best and the equip limit are checked against your own pets on the server</li>
+              <li>Coin multiplier worked out on the server; the UI only displays it</li>
+              <li>Followers are drawn on each player's device, so they cost the server nothing</li>
+              <li>Cheat-tested: fake pet IDs, junk data and request spam are rejected</li>
+            </ul>
+            <p class="work-credit"><strong>Credits:</strong> the pet models, UI design, icons and sound effect in
+              this clip are third-party assets and are not my own work. All scripting and systems shown are
+              by Phantom Studio.</p>
+          </div>
+        </article>
+
+        <article class="work-item reveal">
+          <div class="work-media">
+            <video src="assets/work/shop-demo.mp4" poster="assets/work/shop-demo-poster.jpg"
+              muted loop playsinline controls preload="none"
+              aria-label="Gameplay recording of the shop and the live exploit tester"></video>
+          </div>
+          <div class="work-body">
+            <p class="work-kicker">Shop &amp; saving · Demo · 2026</p>
+            <h3 class="work-title">Exploit-proof <em>Shop</em></h3>
+            <p class="work-desc">A shop with upgrades and cosmetics that saves every purchase, plus an on-screen
+              exploit tester that sends real cheat requests to the live server and shows each one getting
+              blocked.</p>
+            <ul class="work-points">
+              <li>The client sends only an item ID; prices, limits and effects live on the server</li>
+              <li>Fake prices, made-up items and junk data are all rejected with a reason</li>
+              <li>Editing your coins on your own screen doesn't fool the server's balance</li>
+              <li>Spam is rate-limited, and 10 buys in the same frame charge you exactly once</li>
+              <li>You have to be at the shop to buy; requests from across the map are refused</li>
+              <li>Session-locked saving, with a "saved" badge only once the save has actually gone through</li>
+            </ul>
+            <p class="work-credit"><strong>Credits:</strong> the pet model in the Extra Pet Slot icon is a
+              third-party asset, and saving uses ProfileStore by loleris (open source, Apache 2.0). All
+              scripting, systems and UI shown are by Phantom Studio.</p>
+          </div>
+        </article>
+
+        <article class="work-item reveal">
+          <div class="work-media">
+            <video src="assets/work/combat-demo.mp4" poster="assets/work/combat-demo-poster.jpg"
+              muted loop playsinline controls preload="none"
+              aria-label="Gameplay recording of sword combat, ragdoll knockdowns and the live exploit tester"></video>
+          </div>
+          <div class="work-body">
+            <p class="work-kicker">Combat system · Demo · 2026 · Sound on</p>
+            <h3 class="work-title">Sword Combat &amp; <em>Ragdoll</em></h3>
+            <p class="work-desc">A four-hit sword combo with a finisher that knocks targets into a ragdoll,
+              training dummies that heal, respawn and walk back to their spot, and the exploit tester
+              throwing cheat requests at the live combat server.</p>
+            <ul class="work-points">
+              <li>The client only says "I swung"; the server picks the combo step, the timing and the damage</li>
+              <li>Hits are found by the server: a hitbox swept across the swing, with range, facing and wall checks</li>
+              <li>Damage lands on the animation's impact frame, timed on the server's clock</li>
+              <li>Cooldowns and rate limits on the server: 30 swings at once deal one swing's damage</li>
+              <li>Ragdoll swaps joints for physics constraints and puts the body back together cleanly</li>
+              <li>Hit flash, sparks, damage numbers, camera shake and impact freeze, all client-side</li>
+            </ul>
+            <p class="work-credit"><strong>Credits:</strong> the sword model and aura ("Sword Auras" by
+              RexR_Reborn) and the sword animations are third-party assets, and the sound effects are from
+              Pro Sound Effects via Roblox. All scripting and systems shown are by Phantom Studio.</p>
+          </div>
+        </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="num">02</span>
+          <h2>What I <em>build</em></h2>
+          <p>Things I can script for you. Something else in mind? Ask.</p>
+        </header>
+
+        <ul class="skills">
+          <li class="reveal"><span class="s-idx">01</span><span class="s-name">Combat &amp; abilities</span></li>
+          <li class="reveal"><span class="s-idx">02</span><span class="s-name">Swords, guns &amp; tools</span></li>
+          <li class="reveal"><span class="s-idx">03</span><span class="s-name">Ragdoll &amp; knockback</span></li>
+          <li class="reveal"><span class="s-idx">04</span><span class="s-name">Currency &amp; economy</span></li>
+          <li class="reveal"><span class="s-idx">05</span><span class="s-name">Shops &amp; Robux purchases</span></li>
+          <li class="reveal"><span class="s-idx">06</span><span class="s-name">Saving &amp; player data</span></li>
+          <li class="reveal"><span class="s-idx">07</span><span class="s-name">Pets, eggs &amp; gacha</span></li>
+          <li class="reveal"><span class="s-idx">08</span><span class="s-name">Inventory &amp; trading</span></li>
+          <li class="reveal"><span class="s-idx">09</span><span class="s-name">Rounds, lobbies &amp; game modes</span></li>
+          <li class="reveal"><span class="s-idx">10</span><span class="s-name">Matchmaking &amp; teleports</span></li>
+          <li class="reveal"><span class="s-idx">11</span><span class="s-name">UI scripting &amp; interfaces</span></li>
+          <li class="reveal"><span class="s-idx">12</span><span class="s-name">Animated menus &amp; HUDs</span></li>
+          <li class="reveal"><span class="s-idx">13</span><span class="s-name">Global leaderboards</span></li>
+          <li class="reveal"><span class="s-idx">14</span><span class="s-name">Quests, NPCs &amp; dialogue</span></li>
+          <li class="reveal"><span class="s-idx">15</span><span class="s-name">Codes &amp; daily rewards</span></li>
+          <li class="reveal"><span class="s-idx">16</span><span class="s-name">Tycoons &amp; building systems</span></li>
+          <li class="reveal"><span class="s-idx">17</span><span class="s-name">NPC AI &amp; pathfinding</span></li>
+          <li class="reveal"><span class="s-idx">18</span><span class="s-name">Vehicles</span></li>
+          <li class="reveal"><span class="s-idx">19</span><span class="s-name">Cameras &amp; cutscenes</span></li>
+          <li class="reveal"><span class="s-idx">20</span><span class="s-name">Animation &amp; VFX scripting</span></li>
+          <li class="reveal"><span class="s-idx">21</span><span class="s-name">Admin &amp; moderation tools</span></li>
+          <li class="reveal"><span class="s-idx">22</span><span class="s-name">Anti-exploit &amp; server security</span></li>
+          <li class="reveal"><span class="s-idx">23</span><span class="s-name">Bug fixing &amp; code review</span></li>
+          <li class="reveal"><span class="s-idx">24</span><span class="s-name">Optimization &amp; lag fixes</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <span class="num">03</span>
+          <h2>How a commission <em>works</em></h2>
+        </header>
+        <div class="process">
+          <div class="process-line" aria-hidden="true"><span id="process-fill"></span></div>
+          <ol class="steps">
+            <li class="reveal"><span class="st-n">Brief</span><p>You describe what you want. I ask the questions that usually cause rework later: what saves, who sees what, which platforms.</p></li>
+            <li class="reveal"><span class="st-n">Quote</span><p>A written scope, price and timeline before any work starts. No surprises.</p></li>
+            <li class="reveal"><span class="st-n">Build &amp; test</span><p>Written and playtested in Studio on server and client, including the ways a cheater would try to break it.</p></li>
+            <li class="reveal"><span class="st-n">Deliver</span><p>Scripts plus setup notes: where each one goes, what it needs, and anything it deliberately doesn't do.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap faq-grid">
+        <header class="section-head reveal">
+          <span class="num">04</span>
+          <h2>Good <em>questions</em></h2>
+        </header>
+        <div class="faq reveal">
+          <details><summary>How much does a commission cost?</summary>
+            <p>Every project is quoted individually after a short brief, because a simple shop and a full combat system are very different jobs. Message me and you'll get a written quote.</p></details>
+          <details><summary>Can you work inside my existing game?</summary>
+            <p>Yes. I work within your current structure and follow your code style, so the new system feels like it was always there.</p></details>
+          <details><summary>Can you fix exploits in scripts I already have?</summary>
+            <p>Yes. A review ranks problems exploits first, then data loss, then performance, then everything else.</p></details>
+          <details><summary>How long does it take?</summary>
+            <p>It depends on scope. The timeline is part of the written quote, before you commit to anything.</p></details>
+          <details><summary>How do I pay?</summary>
+            <p>Payment terms are agreed with you before work starts.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="blobs blobs-contact" aria-hidden="true"><span class="b1"></span><span class="b2"></span></div>
+      <div class="wrap">
+        <p class="kicker reveal">Start a commission</p>
+        <h2 class="contact-title reveal">Let's build <em>it.</em></h2>
+        <p class="contact-sub reveal">A rough idea is fine. I'll ask the rest.</p>
+        <ul class="contact-links">
+          <li class="reveal"><button type="button" class="c-link copy" data-copy="phantomxtra"><span class="c-k">Discord</span><span class="c-v">phantomxtra</span><span class="c-h" aria-live="polite">copy</span></button></li>
+          <li class="reveal"><a class="c-link" href="https://x.com/PhantomXtras" target="_blank" rel="noopener"><span class="c-k">X</span><span class="c-v">@PhantomXtras</span><span class="c-h">open ↗</span></a></li>
+          <li class="reveal"><a class="c-link" href="mailto:phantomstudiio@gmail.com?subject=Roblox%20commission"><span class="c-k">Email</span><span class="c-v">phantomstudiio@gmail.com</span><span class="c-h">write ↗</span></a></li>
+        </ul>
+      </div>
+      <footer class="footer wrap">
+        <span>© <span id="year">2026</span> Phantom Studio</span>
+      </footer>
+    </section>
   </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
