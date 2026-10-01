@@ -114,16 +114,28 @@ if (workToggle && workList) {
     workList.classList.toggle("open", open);
     workToggle.setAttribute("aria-expanded", String(open));
     if (label) label.textContent = open ? "Hide work" : "View work";
-    videos.forEach((v) => {
-      if (open) { v.preload = "metadata"; if (!reduceMotion) v.play().catch(() => {}); }
-      else v.pause();
-    });
+    if (!open) videos.forEach((v) => v.pause());
   };
   workToggle.addEventListener("click", () => setOpen(!workList.classList.contains("open")));
   // the nav link and the hero's scroll cue open it too
   document.querySelectorAll('a[href="#work"]').forEach((a) => a.addEventListener("click", () => setOpen(true)));
   if (location.hash === "#work") setOpen(true);
 }
+
+/* ---------- Work videos: play on click, one at a time ---------- */
+document.querySelectorAll(".work-media").forEach((media) => {
+  const video = media.querySelector("video");
+  const button = media.querySelector(".play-btn");
+  if (!video || !button) return;
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".work-media video").forEach((other) => { if (other !== video) other.pause(); });
+    video.muted = false; // a click is consent for sound
+    video.controls = true;
+    video.play().catch(() => { video.muted = true; video.play().catch(() => {}); });
+  });
+  video.addEventListener("play", () => media.classList.add("playing"));
+  video.addEventListener("pause", () => { if (!video.seeking) media.classList.remove("playing"); });
+});
 
 /* ---------- Process line fills as you scroll ---------- */
 const fill = document.getElementById("process-fill");

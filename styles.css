@@ -277,3 +277,22 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .work-list-inner > :first-child { margin-top: clamp(40px, 7vh, 80px); }
 .work-list.open .work-list-inner { padding-bottom: 8px; }
 @media (max-width: 600px) { .work-toggle { grid-column: 1; } }
+
+/* Play button over each work video: nothing plays until it's pressed */
+.play-btn {
+  all: unset; box-sizing: border-box; cursor: pointer; position: absolute; inset: 0;
+  display: grid; place-items: center; background: linear-gradient(180deg, rgba(7, 7, 11, 0.05), rgba(7, 7, 11, 0.45));
+  transition: opacity 0.35s, background 0.35s;
+}
+.play-btn span {
+  position: relative; width: clamp(64px, 7vw, 86px); aspect-ratio: 1; border-radius: 50%;
+  background: linear-gradient(135deg, var(--violet), var(--cyan));
+  box-shadow: 0 0 0 10px rgba(157, 140, 255, 0.16), 0 20px 60px -10px rgba(157, 140, 255, 0.7);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s;
+}
+.play-btn span::after {
+  content: ""; position: absolute; left: 54%; top: 50%; transform: translate(-50%, -50%);
+  border-style: solid; border-width: 13px 0 13px 21px; border-color: transparent transparent transparent #07070b;
+}
+.play-btn:hover span, .play-btn:focus-visible span { transform: scale(1.08); box-shadow: 0 0 0 16px rgba(157, 140, 255, 0.2), 0 24px 70px -10px rgba(157, 140, 255, 0.85); }
+.work-media.playing .play-btn { opacity: 0; pointer-events: none; }
