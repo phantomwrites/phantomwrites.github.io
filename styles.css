@@ -327,3 +327,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .mini-credit { margin-top: clamp(28px, 4vh, 40px); }
 @media (max-width: 900px) { .mini-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .mini-grid { grid-template-columns: 1fr; } }
+
+.mini-wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1.35fr 1fr; gap: clamp(22px, 3vw, 44px); align-items: center; }
+.mini-wide .mini-title { margin-top: 0; font-size: clamp(1.4rem, 2.2vw, 1.9rem); }
+.mini-wide .mini-desc { font-size: 1rem; }
+@media (max-width: 900px) { .mini-wide { grid-template-columns: 1fr; } .mini-wide .mini-title { margin-top: 4px; } }
