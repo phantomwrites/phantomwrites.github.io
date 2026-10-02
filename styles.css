@@ -67,12 +67,12 @@ em { font-family: inherit; font-style: normal; font-weight: inherit; } /* highli
 .hero-code pre {
   position: absolute; inset: 0; margin: 0; padding: 90px 3vw 0;
   font-family: var(--mono); font-size: clamp(10.5px, 0.95vw, 14px); line-height: 1.75;
-  color: #6f6a9e; white-space: pre; overflow: hidden;
+  color: #6f6a9e; white-space: pre; overflow: hidden; opacity: 0.35; /* faint, so the words above stay readable */
   column-width: 34em; column-gap: 3em; column-fill: auto;
 }
 /* outline of the headline, so the words stay legible through the lens */
-.hero-code .wire .headline { color: transparent; -webkit-text-stroke: 1px rgba(157, 140, 255, 0.9); }
-.hero-code .wire .headline em { color: transparent; -webkit-text-stroke: 1px rgba(95, 224, 214, 0.9); }
+.hero-code .wire .headline { color: rgba(6, 6, 10, 0.92); -webkit-text-stroke: 1.5px rgba(157, 140, 255, 0.95); } /* filled letters: code never shows through them */
+.hero-code .wire .headline em { color: rgba(6, 6, 10, 0.92); -webkit-text-stroke: 1.5px rgba(95, 224, 214, 0.95); }
 .hero-code .wire::before {
   content: ""; position: absolute; inset: 0;
   background: radial-gradient(ellipse at center, rgba(6, 6, 10, 0.0), rgba(6, 6, 10, 0.55));
@@ -104,7 +104,7 @@ em { font-family: inherit; font-style: normal; font-weight: inherit; } /* highli
   opacity: 0; transform: translateY(14px); animation: sub-in 1s 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 @keyframes sub-in { to { opacity: 1; transform: none; } }
-.hero-code .wire .hero-sub { color: rgba(157, 140, 255, 0.55); }
+.hero-code .wire .hero-sub { color: rgba(200, 192, 255, 0.95); text-shadow: 0 0 6px #06060a, 0 0 12px #06060a, 0 0 18px #06060a; }
 .headline {
   font-weight: 500; letter-spacing: -0.045em; line-height: 0.92;
   font-size: clamp(3.2rem, 11vw, 11.5rem);
