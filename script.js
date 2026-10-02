@@ -73,7 +73,7 @@ if (hero) {
       tx = hero.clientWidth * (0.5 + 0.3 * Math.sin(t * 0.45));
       ty = hero.clientHeight * (0.45 + 0.12 * Math.sin(t * 0.8 + 1));
     }
-    const k = reduceMotion ? 1 : 0.12;
+    const k = reduceMotion ? 1 : (fine && inside ? 0.45 : 0.12); // tight on the cursor, gentle when wandering
     x += (tx - x) * k; y += (ty - y) * k;
     r += (tr - r) * (reduceMotion ? 1 : 0.06);
     root.style.setProperty("--lens-x", x.toFixed(1) + "px");
