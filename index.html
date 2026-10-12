@@ -74,15 +74,34 @@
         <header class="section-head reveal">
           <span class="num">01</span>
           <h2>Selected <em>work</em></h2>
-          <p>Demo systems built, playtested and cheat-tested in my own showcase place.
-            Recorded in the live Roblox client.</p>
           <button type="button" class="work-toggle" aria-expanded="true" aria-controls="work-list">
-            <span class="wt-label">Hide work</span><span class="wt-count">10 demos</span><span class="wt-icon" aria-hidden="true">+</span>
+            <span class="wt-label">Hide work</span><span class="wt-count">11 demos</span><span class="wt-icon" aria-hidden="true">+</span>
           </button>
         </header>
 
         <div id="work-list" class="work-list open">
         <div class="work-list-inner">
+        <article class="work-item reveal">
+          <div class="work-media">
+            <video src="assets/work/guns-demo.mp4" poster="assets/work/guns-demo-poster.jpg"
+              loop playsinline preload="none"
+              aria-label="Gameplay recording of the Wild West gun system: four guns, reloads, aiming and targets"></video>
+            <button type="button" class="play-btn" aria-label="Play the gun system demo"><span aria-hidden="true"></span></button>
+          </div>
+          <div class="work-body">
+            <p class="work-kicker">Gun system · Concept build · 2026 · Sound on</p>
+            <h3 class="work-title">Wild West <em>Gun System</em></h3>
+            <p class="work-desc">Four guns with their own reloads, aim zoom and hits checked by the server, in a Wild West shooting gallery.</p>
+            <ul class="work-points">
+              <li>Revolver, lever rifle, double-barrel and a full-auto SMG</li>
+              <li>Each gun has its own reload: a swing-out cylinder, a lever, break-open barrels and a mag swap</li>
+              <li>The server rebuilds every shot and checks fire rate, ammo, walls and aim before any damage</li>
+              <li>Headshots are decided on the server, so the hit marker always shows real damage</li>
+            </ul>
+            <details class="work-credit"><summary>Credits</summary><p>The gun sounds are third-party assets from the Roblox Creator Store, and the gun models were made with Roblox's AI model generator. All scripting, systems, animations and the map are by Phantom Studio.</p></details>
+          </div>
+        </article>
+
         <article class="work-item reveal">
           <div class="work-media">
             <video src="assets/work/pets-demo.mp4" poster="assets/work/pets-demo-poster.jpg"
@@ -148,7 +167,7 @@
 
         <div class="mini-head reveal">
           <h3>More <em>work</em></h3>
-          <p>Smaller systems from the same showcase place.</p>
+          <p>Smaller systems from my showcase place.</p>
         </div>
         <div class="mini-grid">
           <article class="mini mini-wide reveal">
