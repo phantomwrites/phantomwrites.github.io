@@ -113,7 +113,7 @@ if (workToggle && workList) {
   const setOpen = (open) => {
     workList.classList.toggle("open", open);
     workToggle.setAttribute("aria-expanded", String(open));
-    if (label) label.textContent = open ? "Hide work" : "View work";
+    if (label) label.textContent = open ? "Hide Work" : "Show Work";
     if (!open) videos.forEach((v) => v.pause());
   };
   workToggle.addEventListener("click", () => setOpen(!workList.classList.contains("open")));

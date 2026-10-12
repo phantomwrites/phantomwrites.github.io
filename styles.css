@@ -280,7 +280,6 @@ em { font-family: inherit; font-style: normal; font-weight: inherit; } /* highli
 }
 .work-toggle:hover, .work-toggle[aria-expanded="true"] { border-color: var(--violet); background: rgba(157, 140, 255, 0.08); }
 .wt-label { font-size: 1.05rem; letter-spacing: -0.01em; }
-.wt-count { font-family: var(--mono); font-size: 0.72rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.08em; }
 .wt-icon { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
   background: linear-gradient(135deg, var(--violet), var(--cyan)); color: #07070b; font-family: var(--mono);
   font-size: 1rem; transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); }
