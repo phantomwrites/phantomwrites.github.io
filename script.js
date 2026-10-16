@@ -105,22 +105,26 @@ document.querySelectorAll(".reveal").forEach((el, i) => {
 });
 
 /* ---------- Work: opens on demand; videos only load and play while it's open ---------- */
-const workToggle = document.querySelector(".work-toggle");
-const workList = document.getElementById("work-list");
-if (workToggle && workList) {
-  const label = workToggle.querySelector(".wt-label");
-  const videos = workList.querySelectorAll("video");
+const makeToggle = (toggle, list, openText, closedText) => {
+  if (!toggle || !list) return null;
+  const label = toggle.querySelector(".wt-label");
+  const videos = list.querySelectorAll("video");
   const setOpen = (open) => {
-    workList.classList.toggle("open", open);
-    workToggle.setAttribute("aria-expanded", String(open));
-    if (label) label.textContent = open ? "Hide Work" : "Show Work";
+    list.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    if (label) label.textContent = open ? openText : closedText;
     if (!open) videos.forEach((v) => v.pause());
   };
-  workToggle.addEventListener("click", () => setOpen(!workList.classList.contains("open")));
+  toggle.addEventListener("click", () => setOpen(!list.classList.contains("open")));
+  return setOpen;
+};
+const setWorkOpen = makeToggle(document.querySelector(".work-toggle:not(.more-toggle)"), document.getElementById("work-list"), "Hide Work", "Show Work");
+if (setWorkOpen) {
   // the nav link and the hero's scroll cue open it too
-  document.querySelectorAll('a[href="#work"]').forEach((a) => a.addEventListener("click", () => setOpen(true)));
-  if (location.hash === "#work") setOpen(true);
+  document.querySelectorAll('a[href="#work"]').forEach((a) => a.addEventListener("click", () => setWorkOpen(true)));
+  if (location.hash === "#work") setWorkOpen(true);
 }
+makeToggle(document.querySelector(".more-toggle"), document.getElementById("more-list"), "Show Less", "Show More");
 
 /* ---------- Work videos: play on click, one at a time ---------- */
 document.querySelectorAll(".work-media").forEach((media) => {

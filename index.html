@@ -104,6 +104,57 @@
 
         <article class="work-item reveal">
           <div class="work-media">
+            <video src="assets/work/height-demo.mp4" poster="assets/work/height-demo-poster.jpg"
+              loop playsinline preload="none"
+              aria-label="Gameplay recording of the height system: Robux rerolls, a spinning height roll and characters resizing"></video>
+            <button type="button" class="play-btn" aria-label="Play the height system demo"><span aria-hidden="true"></span></button>
+          </div>
+          <div class="work-body">
+            <p class="work-kicker">Height system · Concept build · 2026</p>
+            <h3 class="work-title">Height &amp; <em>Rerolls</em></h3>
+            <p class="work-desc">A random height on first join, Robux rerolls, and taller players who run faster and hit harder. The height box in the clip is a Studio-only test tool.</p>
+            <ul class="work-points">
+              <li>Heights from 4'11" to 7'0", with tall rolls rare: 7'0" is about 1 in 244</li>
+              <li>The server rolls, saves and resizes; the client only asks and shows the spin</li>
+              <li>Each Robux purchase gives exactly one reroll, even if Roblox sends it twice</li>
+              <li>Works on R6 and R15, accessories included, and keeps your height when you rejoin</li>
+            </ul>
+            <details class="work-credit"><summary>Credits</summary><p>The tick and land sounds are Roblox's built-in sounds. All scripting, systems and UI shown are by Phantom Studio.</p></details>
+          </div>
+        </article>
+
+        <article class="work-item reveal">
+          <div class="work-media">
+            <video src="assets/work/combat-demo.mp4" poster="assets/work/combat-demo-poster.jpg"
+              loop playsinline preload="none"
+              aria-label="Gameplay recording of sword combat, ragdoll knockdowns and the live exploit tester"></video>
+            <button type="button" class="play-btn" aria-label="Play the combat demo"><span aria-hidden="true"></span></button>
+          </div>
+          <div class="work-body">
+            <p class="work-kicker">Combat system · Demo · 2026 · Sound on</p>
+            <h3 class="work-title">Sword Combat &amp; <em>Ragdoll</em></h3>
+            <p class="work-desc">A four-hit sword combo with a ragdoll finisher, tested against live cheat attempts.</p>
+            <ul class="work-points">
+              <li>The server picks the combo step, the timing and what gets hit</li>
+              <li>A hitbox swept across the swing, with range, facing and wall checks</li>
+              <li>30 swings sent at once deal one swing's damage</li>
+              <li>Ragdolls that knock down and get back up cleanly</li>
+            </ul>
+            <details class="work-credit"><summary>Credits</summary><p>The sword model and aura ("Sword Auras" by RexR_Reborn) and the sword animations are third-party assets, and the sound effects are from Pro Sound Effects via Roblox. All scripting and systems shown are by Phantom Studio.</p></details>
+          </div>
+        </article>
+
+        <div class="mini-head reveal">
+          <h3>More <em>work</em></h3>
+          <p>Smaller systems and more.</p>
+          <button type="button" class="work-toggle more-toggle" aria-expanded="false" aria-controls="more-list">
+            <span class="wt-label">Show More</span><span class="wt-icon" aria-hidden="true">+</span>
+          </button>
+        </div>
+        <div id="more-list" class="work-list">
+        <div class="work-list-inner">
+        <article class="work-item reveal">
+          <div class="work-media">
             <video src="assets/work/pets-demo.mp4" poster="assets/work/pets-demo-poster.jpg"
               loop playsinline preload="none"
               aria-label="Gameplay recording of the pet hatching and following system"></video>
@@ -144,31 +195,6 @@
           </div>
         </article>
 
-        <article class="work-item reveal">
-          <div class="work-media">
-            <video src="assets/work/combat-demo.mp4" poster="assets/work/combat-demo-poster.jpg"
-              loop playsinline preload="none"
-              aria-label="Gameplay recording of sword combat, ragdoll knockdowns and the live exploit tester"></video>
-            <button type="button" class="play-btn" aria-label="Play the combat demo"><span aria-hidden="true"></span></button>
-          </div>
-          <div class="work-body">
-            <p class="work-kicker">Combat system · Demo · 2026 · Sound on</p>
-            <h3 class="work-title">Sword Combat &amp; <em>Ragdoll</em></h3>
-            <p class="work-desc">A four-hit sword combo with a ragdoll finisher, tested against live cheat attempts.</p>
-            <ul class="work-points">
-              <li>The server picks the combo step, the timing and what gets hit</li>
-              <li>A hitbox swept across the swing, with range, facing and wall checks</li>
-              <li>30 swings sent at once deal one swing's damage</li>
-              <li>Ragdolls that knock down and get back up cleanly</li>
-            </ul>
-            <details class="work-credit"><summary>Credits</summary><p>The sword model and aura ("Sword Auras" by RexR_Reborn) and the sword animations are third-party assets, and the sound effects are from Pro Sound Effects via Roblox. All scripting and systems shown are by Phantom Studio.</p></details>
-          </div>
-        </article>
-
-        <div class="mini-head reveal">
-          <h3>More <em>work</em></h3>
-          <p>Smaller systems from my showcase place.</p>
-        </div>
         <div class="mini-grid">
           <article class="mini mini-wide reveal">
             <div class="work-media">
@@ -239,6 +265,8 @@
           </article>
         </div>
         <details class="work-credit mini-credit reveal"><summary>Credits</summary><p>The coin sound is a third-party Creator Store asset, and the chest and dash sounds are from Pro Sound Effects via Roblox. All scripting, systems and UI shown are by Phantom Studio.</p></details>
+        </div>
+        </div>
         </div>
         </div>
       </div>
